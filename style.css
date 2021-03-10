@@ -32,6 +32,32 @@ Version: 1.0
      border-bottom:none;
  }
 
+ article.post-aside,
+ article.post-link{
+     font-size: 125%;
+     background-color: #FFF5CB;
+     padding: 20px;
+     border-radius: 5px;
+     box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+ }
+
+.mini-meta{
+    font-size:68%;
+    margin:0;
+    color:#777;
+}
+
+/* Link Post Formate Styles */
+
+article.post-link{
+    padding:0;
+    background-color: #E0EBFF;
+}
+article.post-link a{
+    display:block;
+    padding:20px;
+}
+
  /* Header */
 
 .site-header{
@@ -82,9 +108,23 @@ article.post{
 
 /* For Active Menu */
 .site-header nav ul li.current-menu-item a:link,
-.site-header nav ul li.current-menu-item a:visited{
+.site-header nav ul li.current-menu-item a:visited,
+.site-header nav ul li.current-page-ancestor a:link,
+.site-header nav ul li.current-page-ancestor a:visited{
     background-color: #006ec3;
     color:#FFF;
+}
+
+/* Main Column */
+.main-column{
+    width:66%;
+    float: left;
+}
+
+/* Side Column */
+.secondary-column{
+    width: 30%;
+    float: right;
 }
 
 /* Footer Menu */
@@ -131,4 +171,80 @@ div.info-box h4{
 
 div.info-box p{
     font-size:85%;
+}
+
+/* Children Links */
+
+.children-links a:link,
+.children-links a:visited{
+    text-decoration: none;
+}
+
+
+.children-links{
+    margin-bottom: 20px;
+    font-size: 80%;
+}
+
+.children-links li {
+    margin-right: 20px;
+}
+
+.children-links .parent-link{
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 120%;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.children-links .parent-link a:link,
+.children-links .parent-link a:visited{
+    color:#333;
+}
+
+.children-links .current_page_item a:link,
+.children-links .current_page_item a:visited{
+    border-bottom: 1px solid #DDD;
+    color: #333;
+    cursor: default;
+}
+
+/* Post Styles */
+
+.post h2{
+    margin-bottom: 0;
+}
+
+p.post-info{
+    font-size: 87%;
+    color:#999;
+}
+
+p.post-info a:link,
+p.post-info a:visited{
+    color:#999;
+}
+
+/* Imgae Styles */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.has-thumbnail{
+    position: relative;
+    padding-left: 200px;
+}
+
+.post-thumbnail{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Search section*/
+div.head-search{
+    float: right;
 }

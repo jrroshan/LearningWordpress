@@ -1,20 +1,25 @@
 <?php 
 
-get_header();
+get_header(); ?>
 
-if(have_posts()):
-    while(have_posts()):the_post(); ?>
+<div class="site-content clearfix">
+<!-- Main Column -->
+<div class="main-column">
 
-    <article class="post">
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <?php the_content(); ?>
-    </article>
-    <?php endwhile;
-    
-else:
-    echo '<p> No Content found</p>';
+    <?php if(have_posts()):
+        while(have_posts()):the_post();
 
-endif;
+            get_template_part('content',get_post_format());
+        endwhile;
+        
+    else:
+        echo '<p> No Content found</p>';
 
-get_footer();
+    endif; ?>
+
+</div><!--/Main Column  -->
+
+<?php get_sidebar(); ?>
+</div>
+<?php get_footer();
 ?>
